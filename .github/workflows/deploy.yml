@@ -25,7 +25,7 @@ jobs:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - name: Echo urls
         run: |
-          echo $steps.waitForNetlifyDeploy.outputs.url
+          echo ${{ steps.waitForDeployment.outputs.url }}
 
 
       # - name: Deploy to Netlify
