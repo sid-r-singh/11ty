@@ -17,7 +17,7 @@ jobs:
           npm ci
       - name: Build
         run: |
-          npm run build
+          eleventy
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
