@@ -24,8 +24,12 @@ jobs:
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - name: Echo urls
-        run: |
-          echo "${{ steps.waitForDeployment.outputs.url }}"
+        # run: |
+        #   echo "${{ steps.waitForDeployment.outputs.url }}"
+        # name: Print author name with an environment variable
+        run: echo $BUILD_URL
+        env:
+          BUILD_URL: ${{ steps.waitForDeployment.outputs.url }}
       
 
 
